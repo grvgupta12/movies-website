@@ -1,0 +1,55 @@
+.mainWrapper{
+	align-items: center;
+}
+
+.inputBox{
+
+    border: 1px solid;
+    
+}
+
+#listOfvalues{
+  margin-left: 20%;
+  margin-top: 1%;
+}
+
+#numberExist{
+  margin-left: 20%
+}
+
+
+/*#listOfvalues{
+	background-color: #d7dbf2;
+    padding: 1%;
+    margin-top: 5%;
+    border-radius: 4%;
+    margin-left: 20%
+}
+
+#numberExist{
+    background-color: #f5a87d;
+    padding: 1%;
+    margin-top: 1%;
+    border-radius: 4%;
+}*/
+
+.mainWrapper{
+	    border: 1px solid;
+    border-radius: 3%;
+    padding: 5%;
+    margin-top: 6%;
+}
+
+label{
+	font-weight: 600;
+
+}
+
+.heading{
+	margin-left: 40%;
+	padding-bottom: 2%;
+}
+
+.inputBox{
+	margin-left: 35%;
+}

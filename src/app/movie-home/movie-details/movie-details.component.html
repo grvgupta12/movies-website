@@ -1,0 +1,42 @@
+<div class="container-fluid" style="margin-left:17%">
+  <h2 class="title" style="font-size: 18px;line-height: 21px;color: #333;font-weight: 700;margin: 0;">Movies</h2>
+  <div class="row" *ngFor="let movie of movies | paginate: { itemsPerPage: 5, currentPage: p, id: 'futureForecasts'}; let i = index ">
+    <div class="col-md-12" style="margin-top:1%">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="collapse-table collapse" style="padding-bottom: 0;">
+            <iframe width="100%" height="315" [src]="movie.TrailerURL | youtube" frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="card  collapse-button-row">
+            <h5 class="card-header" style="background: #625b69;color: white;">
+              {{this.movie.EventTitle}}<p>
+            </h5>
+            <a (click)='showCollapsedTable($event,movie)' class="view-all" style="position: absolute;right: 0;top: 0;font-size: 18px;text-decoration: none;color: #ffb300;font-weight: 500;margin-top: 12px;margin-right: 10px;">Watch
+              Trailer</a>
+            <div class="card-body" style="background: #f2f2f2">
+              <div class="row card-text">
+                <div class="col-md-6">
+                  Language: <span style="color: #ff0000"> {{this.movie.EventLanguage}}</span>
+                </div>
+                <div class="col-md-6">
+                  Genere: <span style="color: #0000ff">{{this.movie.EventGenre}}</span>
+                </div>
+              </div>
+              <div class="row card-text">
+                <div class="col-md-6">
+                  ShowDate: {{this.movie.ShowDate}}
+                </div>
+                <div class="col-md-6">
+                  Views: {{this.movie.wtsCount}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="p = $event" id="futureForecasts"></pagination-controls>
+</div>
